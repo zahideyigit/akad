@@ -1,0 +1,7 @@
+# Python scripts (used during setup)
+*.py
+__pycache__/
+
+# OS files
+.DS_Store
+Thumbs.db
