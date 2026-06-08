@@ -1049,11 +1049,21 @@ footer {
 
 @media (max-width: 480px) {
   .hero-stats {
-    gap: 0.6rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    width: 94%;
     padding-top: 1rem;
-    width: 96%;
+    justify-items: center;
   }
-  .stat-item { min-width: 0; flex: 1; }
-  .stat-number { font-size: 1.4rem; }
-  .stat-label { font-size: 0.58rem; letter-spacing: 0.5px; white-space: nowrap; }
+  .stat-item { min-width: 0; overflow: hidden; }
+  .stat-number { font-size: 1.35rem; }
+  .stat-label {
+    font-size: 0.56rem;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+  }
 }
