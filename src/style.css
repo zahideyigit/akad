@@ -797,6 +797,39 @@ cite {
   flex-shrink: 0;
 }
 
+.insta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  color: var(--white);
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: var(--transition);
+}
+
+.insta-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(220,39,67,0.35);
+}
+
+.footer-insta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: rgba(255,255,255,0.5);
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: var(--transition);
+}
+
+.footer-insta:hover {
+  color: #e1306c;
+}
+
 .contact-emblem {
   margin-top: 2rem;
   width: 80px;
@@ -1005,11 +1038,20 @@ footer {
   .hamburger { display: flex; }
   nav.scrolled .hamburger span { background: var(--navy); }
 
-  .hero-stats { gap: 2rem; }
+  .hero-stats { gap: 1.5rem; }
   .commissions-grid { grid-template-columns: 1fr; }
   .city-photo-row { grid-template-columns: 1fr; height: 220px; }
   .city-photo:last-child { display: none; }
   .form-row { grid-template-columns: 1fr; }
   section { padding: 5rem 5%; }
   .hero-emblem { width: 80px; height: 80px; }
+}
+
+@media (max-width: 480px) {
+  .hero-stats {
+    gap: 1rem;
+    padding-top: 1rem;
+  }
+  .stat-number { font-size: 1.55rem; }
+  .stat-label { font-size: 0.62rem; letter-spacing: 0.8px; }
 }
